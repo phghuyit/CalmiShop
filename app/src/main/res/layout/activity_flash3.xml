@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/bgflash3"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHỐN ĐỂ TRỞ VỀ,"
+        android:textSize="25sp"
+        android:fontFamily="@font/lorabold"
+        android:textColor="#606060"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CẢM TRỌN BÌNH YÊN"
+        android:textSize="25sp"
+        android:fontFamily="@font/lorabold"
+        android:textColor="#303030"
+        />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/lorabold"
+        android:text="Calmi Shop mang bình yên đến từng góc nhỏ tổ ấm"
+        android:textSize="15sp" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/skipdot"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/skipdot"
+        />
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:background="@drawable/btn"
+        android:gravity="center"
+        android:id="@+id/skipbtn"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:fontFamily="@font/lorasemibold"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+    <TextView
+        android:textColor="#ffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" skip"
+        android:drawableStart="@drawable/skipline"
+        android:clickable="true"
+        android:id="@+id/skipline"
+        />
+</LinearLayout>
