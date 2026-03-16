@@ -9,27 +9,31 @@ import com.phghuy.calmihome.fragments.AccountFragment;
 import com.phghuy.calmihome.fragments.HisFragment;
 import com.phghuy.calmihome.fragments.HomeFragment;
 
-public class TablayoutAdapter extends FragmentStateAdapter {
+//public class TablayoutAdapter extends FragmentStateAdapter {
+//
+//    public TablayoutAdapter(@NonNull FragmentActivity fragmentActivity) {
+//        super(fragmentActivity);
+//    }
+//
+//    @NonNull
+//    @Override
+//    public Fragment createFragment(int position) {
+//        switch (position){
+//            case 1:
+//                return new HisFragment();
+//            case 2:
+//                return new AccountFragment();
+//            default:
+//                return new HomeFragment();
+//        }
+//    }
+//
+//    @Override
+//    public int getItemCount() {
+//        return 3;
+//    }
+//}
 
-    public TablayoutAdapter(@NonNull FragmentActivity fragmentActivity) {
-        super(fragmentActivity);
-    }
-
-    @NonNull
-    @Override
-    public Fragment createFragment(int position) {
-        switch (position){
-            case 1:
-                return new HisFragment();
-            case 2:
-                return new AccountFragment();
-            default:
-                return new HomeFragment();
-        }
-    }
-
-    @Override
-    public int getItemCount() {
-        return 3;
-    }
+public class TablayoutAdapter extends FragmentStateAdapter{
+    public TablayoutAdapter(@NonNull FragmentActivity)
 }
