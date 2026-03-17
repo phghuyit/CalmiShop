@@ -6,9 +6,36 @@
     tools:context=".fragments.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="hello_blank_fragmentworld" />
+        android:orientation="vertical"
+        >
+
+        <ViewFlipper
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:inAnimation="@anim/slide_in_right"
+            android:outAnimation="@anim/slide_in_left"
+            android:flipInterval="3000"
+            android:autoStart="true"
+            >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/bgflash"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/bgflash2"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/bgflash3"/>
+        </ViewFlipper>
+    </LinearLayout>
 
 </FrameLayout>
