@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".fragments.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -20,57 +22,62 @@
             android:flipInterval="3000"
             android:autoStart="true"
             >
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/banner1"/>
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/banner2"/>
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/banner3"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/banner1"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/banner2"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/banner3"/>
         </ViewFlipper>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Categories"
             android:layout_marginTop="20dp"
+            android:layout_marginStart="12dp"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/gelasiobold"
             />
         <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            >
             <LinearLayout
                 android:layout_height="wrap_content"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:orientation="horizontal">
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_height="wrap_content"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
                     app:cardCornerRadius="10dp"
-                    android:background="@color/black">
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp">
                     <LinearLayout android:layout_height="wrap_content"
                         android:layout_width="match_parent"
                         android:orientation="vertical"
                         android:padding="12dp"
-                        android:gravity="left|center">
+                        android:gravity="center">
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/chair_cate"
+                            android:src="@drawable/wardrobe_cate"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Chair"
-
+                            android:text="Tủ Quần Áo"
+                            android:textAlignment="center"
                             />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -80,12 +87,13 @@
                     android:layout_height="wrap_content"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     app:cardCornerRadius="10dp"
-                    android:background="@color/black">
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp">
                     <LinearLayout android:layout_height="wrap_content"
                         android:layout_width="match_parent"
                         android:orientation="vertical"
                         android:padding="12dp"
-                        android:gravity="left|center">
+                        android:gravity="center">
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
@@ -105,12 +113,13 @@
                     android:layout_height="wrap_content"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     app:cardCornerRadius="10dp"
-                    android:background="@color/black">
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp">
                     <LinearLayout android:layout_height="wrap_content"
                         android:layout_width="match_parent"
                         android:orientation="vertical"
                         android:padding="12dp"
-                        android:gravity="left|center">
+                        android:gravity="center">
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
@@ -130,12 +139,13 @@
                     android:layout_height="wrap_content"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     app:cardCornerRadius="10dp"
-                    android:background="@color/black">
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp">
                     <LinearLayout android:layout_height="wrap_content"
                         android:layout_width="match_parent"
                         android:orientation="vertical"
                         android:padding="12dp"
-                        android:gravity="left|center">
+                        android:gravity="center">
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
@@ -155,12 +165,13 @@
                     android:layout_height="wrap_content"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     app:cardCornerRadius="10dp"
-                    android:background="@color/black">
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp">
                     <LinearLayout android:layout_height="wrap_content"
                         android:layout_width="match_parent"
                         android:orientation="vertical"
                         android:padding="12dp"
-                        android:gravity="left|center">
+                        android:gravity="center">
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
@@ -180,12 +191,13 @@
                     android:layout_height="wrap_content"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     app:cardCornerRadius="10dp"
-                    android:background="@color/black">
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp">
                     <LinearLayout android:layout_height="wrap_content"
                         android:layout_width="match_parent"
                         android:orientation="vertical"
                         android:padding="12dp"
-                        android:gravity="left|center">
+                        android:gravity="center">
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
@@ -205,21 +217,22 @@
                     android:layout_height="wrap_content"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     app:cardCornerRadius="10dp"
-                    android:background="@color/black">
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp">
                     <LinearLayout android:layout_height="wrap_content"
                         android:layout_width="match_parent"
                         android:orientation="vertical"
                         android:padding="12dp"
-                        android:gravity="left|center">
+                        android:gravity="center">
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/chair_cate"
+                            android:src="@drawable/bookshelf_cate"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Chair"
+                            android:text="Kệ sách"
 
                             />
                     </LinearLayout>
@@ -230,71 +243,22 @@
                     android:layout_height="wrap_content"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     app:cardCornerRadius="10dp"
-                    android:background="@color/black">
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp">
                     <LinearLayout android:layout_height="wrap_content"
                         android:layout_width="match_parent"
                         android:orientation="vertical"
                         android:padding="12dp"
-                        android:gravity="left|center">
+                        android:gravity="center">
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/chair_cate"
+                            android:src="@drawable/curtain_cate"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Chair"
-
-                            />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:layout_height="wrap_content"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    app:cardCornerRadius="10dp"
-                    android:background="@color/black">
-                    <LinearLayout android:layout_height="wrap_content"
-                        android:layout_width="match_parent"
-                        android:orientation="vertical"
-                        android:padding="12dp"
-                        android:gravity="left|center">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/chair_cate"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Chair"
-
-                            />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:layout_height="wrap_content"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    app:cardCornerRadius="10dp"
-                    android:background="@color/black">
-                    <LinearLayout android:layout_height="wrap_content"
-                        android:layout_width="match_parent"
-                        android:orientation="vertical"
-                        android:padding="12dp"
-                        android:gravity="left|center">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/chair_cate"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Chair"
+                            android:text="Màn cửa"
 
                             />
                     </LinearLayout>
@@ -306,23 +270,27 @@
             android:layout_height="wrap_content"
             android:text="Hot Brands"
             android:layout_marginTop="10dp"
+            android:layout_marginStart="12dp"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/gelasiobold"
             />
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:rowCount="2"
                 android:columnCount="2">
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_margin="10dp"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    >
+                    xmlns:app="http://schemas.android.com/apk/res-auto">
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="240dp"
+                        android:layout_height="120dp"
                         android:src="@drawable/brand1"/>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
@@ -330,17 +298,8 @@
                     android:layout_margin="10dp"
                     xmlns:app="http://schemas.android.com/apk/res-auto">
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/brand4"/>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    app:cardCornerRadius="20dp"
-                    android:layout_margin="10dp"
-                    xmlns:app="http://schemas.android.com/apk/res-auto">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="240dp"
+                        android:layout_height="120dp"
                         android:src="@drawable/brand2"/>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
@@ -348,11 +307,19 @@
                     android:layout_margin="10dp"
                     xmlns:app="http://schemas.android.com/apk/res-auto">
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="240dp"
+                        android:layout_height="120dp"
                         android:src="@drawable/brand3"/>
                 </androidx.cardview.widget.CardView>
-
+                <androidx.cardview.widget.CardView
+                app:cardCornerRadius="20dp"
+                android:layout_margin="10dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+                <ImageView
+                    android:layout_width="240dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/brand4"/>
+                </androidx.cardview.widget.CardView>
             </GridLayout>
         </HorizontalScrollView>
 
@@ -361,266 +328,73 @@
             android:layout_height="wrap_content"
             android:text="Promotion"
             android:layout_marginTop="20dp"
+            android:layout_marginStart="12dp"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/gelasiobold"
             />
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                >
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_height="wrap_content"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
                     app:cardCornerRadius="10dp"
-                    android:background="@color/black">
-                    <LinearLayout android:layout_height="wrap_content"
-                        android:layout_width="match_parent"
-                        android:orientation="vertical"
-                        android:padding="12dp"
-                        android:gravity="left|center">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/chair_cate"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Chair"
-
-                            />
-                    </LinearLayout>
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp">
+                    <ImageView
+                        android:layout_width="180dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/promotion1"
+                        />
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_height="wrap_content"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
                     app:cardCornerRadius="10dp"
-                    android:background="@color/black">
-                    <LinearLayout android:layout_height="wrap_content"
-                        android:layout_width="match_parent"
-                        android:orientation="vertical"
-                        android:padding="12dp"
-                        android:gravity="left|center">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/chair_cate"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Ghế"
-
-                            />
-                    </LinearLayout>
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp">
+                    <ImageView
+                        android:layout_width="180dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/promotion2"
+                        />
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_height="wrap_content"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
                     app:cardCornerRadius="10dp"
-                    android:background="@color/black">
-                    <LinearLayout android:layout_height="wrap_content"
-                        android:layout_width="match_parent"
-                        android:orientation="vertical"
-                        android:padding="12dp"
-                        android:gravity="left|center">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/table_cate"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Bàn"
-
-                            />
-                    </LinearLayout>
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp">
+                    <ImageView
+                        android:layout_width="180dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/promotion3"
+                        />
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_height="wrap_content"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
                     app:cardCornerRadius="10dp"
-                    android:background="@color/black">
-                    <LinearLayout android:layout_height="wrap_content"
-                        android:layout_width="match_parent"
-                        android:orientation="vertical"
-                        android:padding="12dp"
-                        android:gravity="left|center">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/sofa_cate"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Sofa"
-
-                            />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:layout_height="wrap_content"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    app:cardCornerRadius="10dp"
-                    android:background="@color/black">
-                    <LinearLayout android:layout_height="wrap_content"
-                        android:layout_width="match_parent"
-                        android:orientation="vertical"
-                        android:padding="12dp"
-                        android:gravity="left|center">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/bed_cate"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Giường"
-
-                            />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:layout_height="wrap_content"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    app:cardCornerRadius="10dp"
-                    android:background="@color/black">
-                    <LinearLayout android:layout_height="wrap_content"
-                        android:layout_width="match_parent"
-                        android:orientation="vertical"
-                        android:padding="12dp"
-                        android:gravity="left|center">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/lamp_cate"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Đèn"
-
-                            />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:layout_height="wrap_content"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    app:cardCornerRadius="10dp"
-                    android:background="@color/black">
-                    <LinearLayout android:layout_height="wrap_content"
-                        android:layout_width="match_parent"
-                        android:orientation="vertical"
-                        android:padding="12dp"
-                        android:gravity="left|center">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/chair_cate"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Chair"
-
-                            />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:layout_height="wrap_content"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    app:cardCornerRadius="10dp"
-                    android:background="@color/black">
-                    <LinearLayout android:layout_height="wrap_content"
-                        android:layout_width="match_parent"
-                        android:orientation="vertical"
-                        android:padding="12dp"
-                        android:gravity="left|center">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/chair_cate"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Chair"
-
-                            />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:layout_height="wrap_content"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    app:cardCornerRadius="10dp"
-                    android:background="@color/black">
-                    <LinearLayout android:layout_height="wrap_content"
-                        android:layout_width="match_parent"
-                        android:orientation="vertical"
-                        android:padding="12dp"
-                        android:gravity="left|center">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/chair_cate"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Chair"
-
-                            />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:layout_height="wrap_content"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    app:cardCornerRadius="10dp"
-                    android:background="@color/black">
-                    <LinearLayout android:layout_height="wrap_content"
-                        android:layout_width="match_parent"
-                        android:orientation="vertical"
-                        android:padding="12dp"
-                        android:gravity="left|center">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/chair_cate"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Chair"
-
-                            />
-                    </LinearLayout>
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp">
+                    <ImageView
+                        android:layout_width="180dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/promotion4"
+                        />
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
         </HorizontalScrollView>
     </LinearLayout>
 
-</FrameLayout>
+</androidx.core.widget.NestedScrollView>
+
+
+
