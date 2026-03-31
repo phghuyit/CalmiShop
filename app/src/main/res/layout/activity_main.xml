@@ -8,17 +8,23 @@
     android:gravity="center"
     android:orientation="vertical">
 
-<androidx.viewpager2.widget.ViewPager2
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_weight="9"
-    android:id="@+id/viewPager2"/>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_weight="9" />
+
 
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="#606060"
-        app:tabIconTint="@color/black"
-        android:id="@+id/tabLayout"/>
+        android:id="@+id/tabLayout"
+        app:tabIconTint="@color/tab_icon_color"
+        app:tabSelectedTextColor="@color/tab_icon_color"
+        app:tabIconTintMode="src_in"
+        app:tabRippleColor="@color/color_ripple"/>
+<!--        app:tabIndicator="@color/color_selected"-->
+
 </LinearLayout>

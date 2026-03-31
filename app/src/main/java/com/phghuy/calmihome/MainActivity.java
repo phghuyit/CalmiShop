@@ -40,5 +40,6 @@ public class MainActivity extends AppCompatActivity{
                 }
             }
         }).attach();
+        pager2.setUserInputEnabled(false);
     }
 }
