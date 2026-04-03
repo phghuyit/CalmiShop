@@ -3,11 +3,13 @@ package com.phghuy.calmihome.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-
+import android.widget.TextView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
+import com.google.android.flexbox.FlexboxLayout;
 import com.phghuy.calmihome.R;
 
 /**
@@ -60,7 +62,22 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view= inflater.inflate(R.layout.fragment_home, container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        LinearLayout promotioncontainer = view.findViewById(R.id.promotion_container);
+
+        for(int i=0;i<10;i++){
+            View itempromotion = inflater.inflate(R.layout.item_promotion,promotioncontainer,false);
+            TextView txt = itempromotion.findViewById(R.id.txt);
+            txt.setText("haha"+i);
+            promotioncontainer.addView(itempromotion);
+        }
+
+        FlexboxLayout flexcontainer = view.findViewById(R.id.productcontainer);
+        for(int i=0;i<10;i++){
+            View itemproduct = inflater.inflate(R.layout.item_product,flexcontainer,false);
+            flexcontainer.addView(itemproduct);
+        }
+        return view;
     }
 }
