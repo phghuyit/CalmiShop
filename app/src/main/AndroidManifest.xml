@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    >
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -12,24 +11,44 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CalmiHome">
-
+        <activity
+            android:name=".CardBalanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentMethodActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HelpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RenewPassword"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VerifyAcountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUp"
+            android:exported="false" />
         <activity
             android:name=".SignInActivity"
             android:exported="false" />
         <activity
-            android:name=".LoadingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".FlashActivity3"
-            android:exported="false" />
-        <activity
-            android:name=".FlashActivity2"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".FlashActivity1"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LoadingActivity"
             android:exported="true"
             android:theme="@style/Theme.CalmiHome">
             <intent-filter>

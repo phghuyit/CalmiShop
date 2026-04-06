@@ -25,12 +25,7 @@ public class LoadingActivity extends AppCompatActivity {
         });
 
         ImageView btnlogo = findViewById(R.id.logo);
-        btnlogo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoadingActivity.this,FlashActivity1.class);
-                startActivity(intent);
-            }
-        });
+        btnlogo.setOnClickListener(v ->
+                startActivity(new Intent(LoadingActivity.this, FlashActivity1.class)));
     }
 }

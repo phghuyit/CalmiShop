@@ -28,26 +28,26 @@ public class FlashActivity1 extends AppCompatActivity {
 
         LinearLayout btnskip = findViewById(R.id.skipbtn);
         ImageView dotskip = findViewById(R.id.skipdot);
-        TextView skipline = findViewById(R.id.skipline);
+        LinearLayout skipline = findViewById(R.id.skipline);
 
 
         btnskip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FlashActivity1.this, FlashActivity2.class);
+                Intent intent = new Intent(FlashActivity1.this, SignInActivity.class);
                 startActivity(intent);
             }
         });
         dotskip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(FlashActivity1.this, FlashActivity2.class));
+                startActivity(new Intent(FlashActivity1.this, SignInActivity.class));
             }
         });
         skipline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(FlashActivity1.this, FlashActivity2.class));
+                startActivity(new Intent(FlashActivity1.this, MainActivity.class));
             }
         });
     }

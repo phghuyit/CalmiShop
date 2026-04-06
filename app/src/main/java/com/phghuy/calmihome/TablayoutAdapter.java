@@ -6,8 +6,10 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.phghuy.calmihome.fragments.AccountFragment;
+import com.phghuy.calmihome.fragments.FavouriteFragment;
 import com.phghuy.calmihome.fragments.HisFragment;
 import com.phghuy.calmihome.fragments.HomeFragment;
+import com.phghuy.calmihome.fragments.OrderFragment;
 
 public class TablayoutAdapter extends FragmentStateAdapter {
 
@@ -20,7 +22,7 @@ public class TablayoutAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position){
             case 1:
-                return new HisFragment();
+                return new OrderFragment();
             case 2:
                 return new AccountFragment();
             default:

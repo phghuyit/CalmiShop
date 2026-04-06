@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/main">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_left"
+        android:layout_gravity="start"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/backBtn"
+        />
+
+    <ImageView
+        android:layout_width="168dp"
+        android:layout_height="190dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo_verify_code" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xác nhận OTP"
+        android:textSize="39sp"
+        android:fontFamily="@font/lorabold"
+        android:textColor="#303030"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vui lòng kiểm tra SMS hoặc Email"
+        android:textSize="15sp"
+        android:textColor="#ff4545"
+        android:layout_gravity="center"
+        />
+    <include layout="@layout/layout_input_code_sign_up"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vẫn chưa nhập được mã? "
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginVertical="10dp"
+            android:textColor="#808080"
+            android:textSize="19sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gửi lại liền"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginVertical="10dp"
+            android:textSize="19sp"
+            android:id="@+id/signUpBtn"
+            android:textColor="#2454f8"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+        android:text="Xác thực"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/btn"
+        android:textColor="@color/white"
+        android:id="@+id/regisBtn"
+        android:layout_marginVertical="20dp"
+        android:textSize="22sp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Có vấn đề cần hỗ trợ? "
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginVertical="10dp"
+            android:textColor="#808080"
+            android:textSize="19sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Liên Hệ Ngay"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginVertical="10dp"
+            android:textSize="18sp"
+            android:id="@+id/toHelpBtn"
+            android:textColor="#2454f8"
+            />
+    </LinearLayout>
+</LinearLayout>

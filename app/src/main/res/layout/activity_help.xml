@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/main">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_left"
+        android:layout_gravity="start"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/backBtn"
+        />
+    <ImageView
+        android:layout_width="159dp"
+        android:layout_height="159dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        android:layout_marginVertical="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liên Hệ Hỗ Trợ"
+        android:textSize="39sp"
+        android:fontFamily="@font/lorabold"
+        android:textColor="#303030"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:text="Vui lòng liên hệ với chúng tôi theo các hình thức dưới đây để được hỗ trợ sớm nhất có thể"
+        android:textSize="17sp"
+        android:textColor="#5e5e5e"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        />
+    <include layout="@layout/layout_info_hotline"/>
+    <include layout="@layout/layout_info_mail"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp">
+        <LinearLayout android:layout_height="match_parent" android:layout_width="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chat"
+                android:background="@drawable/bg_circle"
+                android:layout_marginHorizontal="10dp"
+                />
+            <LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_marginStart="5dp"
+                android:layout_marginHorizontal="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunitobold"
+                    android:text="Live Chat"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="40dp"
+                    android:fontFamily="@font/nunitosans"
+                    android:text="Chúng tôi luôn sẵn sàng đợi phản hồi từ bạn"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_right_arrrow"
+                android:layout_marginStart="60dp"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

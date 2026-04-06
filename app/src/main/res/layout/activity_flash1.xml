@@ -1,68 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:background="@drawable/bgflash"
-    android:gravity="center"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
-    >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CHỐN ĐỂ TRỞ VỀ,"
-        android:textSize="25sp"
-        android:fontFamily="@font/lorabold"
-        android:textColor="#606060"
-        
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CẢM TRỌN BÌNH YÊN"
-        android:textSize="25sp"
-        android:fontFamily="@font/lorabold"
-        android:textColor="#303030"
-        />
-
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:fontFamily="@font/lorabold"
-        android:text="Calmi Shop mang bình yên đến từng góc nhỏ tổ ấm"
-        android:textSize="15sp" />
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/skipdot"
-        android:layout_marginBottom="20dp"
-        android:id="@+id/skipdot"
-        />
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgflash"
+    android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="380dp"
-        android:layout_height="60dp"
-        android:background="@drawable/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_weight="11"
         android:gravity="center"
-        android:id="@+id/skipbtn"
-        >
+        android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/lorabold"
+            android:text="CHỐN ĐỂ TRỞ VỀ,"
+            android:textColor="#606060"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/lorabold"
+            android:text="CẢM TRỌN BÌNH YÊN"
+            android:textColor="#303030"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/lorabold"
+            android:text="Calmi Shop mang bình yên đến từng góc nhỏ tổ ấm"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/skipdot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/skipdot" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/skipbtn"
+        android:layout_width="380dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="16dp"
+        android:background="@drawable/btn"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lorasemibold"
             android:text="Next"
             android:textColor="@color/white"
-            android:fontFamily="@font/lorasemibold"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp" />
     </LinearLayout>
-    <TextView
-        android:textColor="#ffff"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=" skip"
-        android:drawableStart="@drawable/skipline"
-        android:clickable="true"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:id="@+id/skipline"
-        />
+        >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:text="Bỏ Qua"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+    </LinearLayout>
+
 </LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/main">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:id="@+id/logo"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xin Chàooooo!"
+        android:textSize="20sp"
+        android:fontFamily="@font/lorabold"
+        android:textColor="#606060"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đăng Ký Tài Khoản Mới"
+        android:textSize="23sp"
+        android:fontFamily="@font/lorabold"
+        android:textColor="#303030"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        >
+        <LinearLayout android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Họ Tên"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Calmi Phạm"
+                android:layout_marginBottom="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Calmi@mail.com"
+                android:layout_marginBottom="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mật Khẩu"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Calmi@123"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xác Nhận Mật Khẩu"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Calmi@123"/>
+
+            <TextView
+                android:layout_width="230dp"
+                android:layout_height="45dp"
+                android:text="Đăng Ký"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/btn"
+                android:textColor="@color/white"
+                android:id="@+id/regisBtn"
+                android:layout_marginVertical="20dp"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Có mật khẩu rùi hả? "
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="10dp"
+                    android:textColor="#808080"
+                    />
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đăng Nhập Liền"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginVertical="10dp"
+                    android:textSize="13sp"
+                    android:id="@+id/signUpBtn"
+                />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+

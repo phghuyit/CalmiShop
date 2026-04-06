@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/main">
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="25dp"
+        app:justifyContent="space_between"
+        android:paddingBottom="5dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_left"
+            android:id="@+id/backBtn"
+
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cart"
+            android:id="@+id/cartBtn"
+
+            />
+    </com.google.android.flexbox.FlexboxLayout>
+        <ScrollView
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:layout_gravity="center|top"
+                    android:layout_marginVertical="10dp"
+                    >
+                    <ViewFlipper
+                        android:layout_width="350dp"
+                        android:layout_height="500dp"
+                        android:inAnimation="@anim/slide_in_right"
+                        android:outAnimation="@anim/slide_in_left"
+                        android:flipInterval="3000"
+                        android:autoStart="true"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/lamp2"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/lamp1"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/lamp3"/>
+                    </ViewFlipper>
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đèn Bàn"
+                    android:fontFamily="@font/gelasiobold"
+                    android:layout_marginStart="15dp"
+                    android:textSize="28sp"
+                    />
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:justifyContent="space_between"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="200,000 vnđ"
+                        android:fontFamily="@font/nunitosans"
+                        android:layout_marginStart="15dp"
+                        android:textSize="28sp"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/qtybtn"
+                        android:layout_marginEnd="15dp"
+                        />
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:fontFamily="@font/nunitosans"
+                    android:padding="10dp"
+                    android:text="Đèn bàn được thiết kế theo phong cách tối giản và hiện đại. Kiểu dáng đơn giản nhưng tinh tế, phù hợp với mọi không gian trong ngôi nhà.&#10;Với nhiều lựa chọn màu sắc, bạn có thể dễ dàng tìm được phiên bản phù hợp với phong cách nội thất của mình."
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginVertical="5dp"
+                    android:fontFamily="@font/nunitobold"
+                    android:text="Màu Sắc"
+                    android:textSize="19sp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:justifyContent="space_around">
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hồng"/>
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Đen"/>
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Trắng"/>
+                    </com.google.android.flexbox.FlexboxLayout>
+                </RadioGroup>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginVertical="5dp"
+                    android:fontFamily="@font/nunitobold"
+                    android:text="Các Sản Phẩm Liên Quan"
+                    android:textSize="19sp" />
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        >
+                        <include layout="@layout/item_product"/>
+                        <include layout="@layout/item_product"/>
+                        <include layout="@layout/item_product"/>
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_margin="10dp"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#663222">
+                    <ImageView
+                        android:layout_width="240dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/brand1"/>
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/nunitobold"
+                    android:text="Đánh Giá Sản Phẩm"
+                    android:textSize="19sp" />
+                <include layout="@layout/item_review"/>
+                <include layout="@layout/item_review"/>
+            </LinearLayout>
+        </ScrollView>
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:justifyContent="space_around"
+        app:alignItems="center"
+        android:layout_marginHorizontal="25dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/favoritebtn"
+            />
+        <TextView
+            android:layout_width="190dp"
+            android:layout_height="65dp"
+            android:text="Thêm vào giỏ hàng"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/btn"
+            android:layout_marginVertical="10dp"
+            android:textColor="@color/white"
+            android:id="@+id/loginBtn"
+            />
+
+    </com.google.android.flexbox.FlexboxLayout>
+</LinearLayout>

@@ -1,8 +1,11 @@
 package com.phghuy.calmihome.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +13,9 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.google.android.flexbox.FlexboxLayout;
+import com.phghuy.calmihome.CartActivity;
+import com.phghuy.calmihome.DetailProductActivity;
+import com.phghuy.calmihome.MainActivity;
 import com.phghuy.calmihome.R;
 
 /**
@@ -69,15 +75,21 @@ public class HomeFragment extends Fragment {
         for(int i=0;i<10;i++){
             View itempromotion = inflater.inflate(R.layout.item_promotion,promotioncontainer,false);
             TextView txt = itempromotion.findViewById(R.id.txt);
-            txt.setText("haha"+i);
+            txt.setText("Sản phẩm"+i);
             promotioncontainer.addView(itempromotion);
         }
 
         FlexboxLayout flexcontainer = view.findViewById(R.id.productcontainer);
-        for(int i=0;i<10;i++){
+        for(int i=0;i<5;i++){
             View itemproduct = inflater.inflate(R.layout.item_product,flexcontainer,false);
             flexcontainer.addView(itemproduct);
         }
+        TextView detaiilProd = view.findViewById(R.id.detailProd);
+        ImageView cart = view.findViewById(R.id.cartBtn);
+
+
+        detaiilProd.setOnClickListener(v -> startActivity(new Intent(getActivity(), DetailProductActivity.class)));
+        cart.setOnClickListener(v->startActivity(new Intent(getActivity(), CartActivity.class)));
         return view;
     }
 }
