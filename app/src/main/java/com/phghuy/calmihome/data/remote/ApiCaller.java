@@ -18,7 +18,7 @@ public class ApiCaller {
 
     private final RequestQueue requestQueue;
     private static final String TAG = "API_HELPER";
-    private static final String BASE_URL = "http://10.0.2.2:8080/user";
+    private static final String BASE_URL = "http://192.168.67.1:8080";
 
     public ApiCaller(Context context) {
         requestQueue = Volley.newRequestQueue(context);

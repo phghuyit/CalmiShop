@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">CalmiHome</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="product_prefix">Sản phẩm </string>
+    <string name="error_json_parse">LỖI ĐỌC JSON: %1$s</string>
+    <string name="error_api">LỖI API: %1$s</string>
+    <string name="error_base64_empty">base64Image is null or empty</string>
+    <string name="error_base64_decode">Base64 decode error: %1$s</string>
+    <string name="error_unknown">Unknown error: %1$s</string>
+    <string name="tab_home">Home</string>
+    <string name="tab_orders">My Orders</string>
+    <string name="tab_account">Account</string>
 </resources>
