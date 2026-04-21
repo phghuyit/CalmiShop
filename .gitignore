@@ -15,7 +15,7 @@ local.properties
 # APK
 *.apk
 *.aab
-
+SendMail.java
 # OS files
 Thumbs.db
 .DS_Store

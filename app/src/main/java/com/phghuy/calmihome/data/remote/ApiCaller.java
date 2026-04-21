@@ -8,6 +8,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.phghuy.calmihome.model.User;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -18,7 +19,7 @@ public class ApiCaller {
 
     private final RequestQueue requestQueue;
     private static final String TAG = "API_HELPER";
-    private static final String BASE_URL = "http://192.168.67.1:8080";
+    private static final String BASE_URL = "http://10.0.2.2:8080";
 
     public ApiCaller(Context context) {
         requestQueue = Volley.newRequestQueue(context);
@@ -30,7 +31,6 @@ public class ApiCaller {
     }
 
     // ==================== GET ====================
-    // Added endpoint, params, and callback as parameters
     public void getItems(String endpoint, Map<String, String> params, OnRawResponse callback) {
         String fullUrl = buildUrlWithParams(BASE_URL + endpoint, params);
 
@@ -99,6 +99,127 @@ public class ApiCaller {
                 url,
                 response -> Log.d(TAG, "DELETE response: " + response),
                 error -> Log.e(TAG, "DELETE error: " + error.toString())
+        );
+
+        requestQueue.add(request);
+    }
+
+    public void DeleteItem(String endpoint, OnRawResponse callback) {
+        String url = BASE_URL + endpoint;
+
+        StringRequest request = new StringRequest(
+                Request.Method.DELETE,
+                url,
+                response -> callback.onSuccess(response),
+                error -> callback.onError(error.toString())
+        );
+
+        requestQueue.add(request);
+    }
+
+    public void registerUser(User userData, OnRawResponse callback) {
+        String url = BASE_URL + "/user/register";
+
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("id", userData.getId());
+            jsonObject.put("firstName", userData.getFirstName());
+            jsonObject.put("lastName", userData.getLastName());
+            jsonObject.put("userName", userData.getUserName());
+            jsonObject.put("emailId", userData.getEmailId());
+            jsonObject.put("password", userData.getPassword());
+            jsonObject.put("active", userData.isActive());
+            jsonObject.put("createdTime", userData.getCreatedTime());
+        } catch (JSONException e) {
+            callback.onError("JSON error: " + e.getMessage());
+            return;
+        }
+
+        JsonObjectRequest request = new JsonObjectRequest(
+                Request.Method.POST,
+                url,
+                jsonObject,
+                response -> callback.onSuccess(response.toString()),
+                error -> callback.onError(error.toString())
+        ) {
+            @Override
+            public String getBodyContentType() {
+                return "application/json; charset=utf-8";
+            }
+        };
+
+        requestQueue.add(request);
+    }
+
+    public void Login(String emailid, String password, OnRawResponse callback) {
+        String url = BASE_URL + "/user/login";
+
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("emailId", emailid);
+            jsonObject.put("password", password);
+        } catch (JSONException e) {
+            callback.onError("JSON error: " + e.getMessage());
+            return;
+        }
+
+        JsonObjectRequest request = new JsonObjectRequest(
+                Request.Method.POST,
+                url,
+                jsonObject,
+                response -> callback.onSuccess(response.toString()),
+                error -> callback.onError(error.toString())
+        ) {
+            @Override
+            public String getBodyContentType() {
+                return "application/json; charset=utf-8";
+            }
+        };
+        requestQueue.add(request);
+    }
+
+    public void updateUser(User userData, OnRawResponse callback) {
+        String url = BASE_URL + "/user/update";
+
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("id", userData.getId());
+            jsonObject.put("firstName", userData.getFirstName());
+            jsonObject.put("lastName", userData.getLastName());
+            jsonObject.put("userName", userData.getUserName());
+            jsonObject.put("emailId", userData.getEmailId());
+            jsonObject.put("password", userData.getPassword());
+            jsonObject.put("active", userData.isActive());
+            jsonObject.put("createdTime", userData.getCreatedTime());
+        } catch (JSONException e) {
+            callback.onError("JSON error: " + e.getMessage());
+            return;
+        }
+
+        JsonObjectRequest request = new JsonObjectRequest(
+                Request.Method.PUT,
+                url,
+                jsonObject,
+                response -> callback.onSuccess(response.toString()),
+                error -> callback.onError(error.toString())
+        ) {
+            @Override
+            public String getBodyContentType() {
+                return "application/json; charset=utf-8";
+            }
+        };
+
+        requestQueue.add(request);
+    }
+
+    public void addCart(String endpoint, OnRawResponse callback) {
+        String url = BASE_URL + endpoint;
+
+        StringRequest request = new StringRequest(
+                Request.Method.POST,
+                url,
+                response -> callback.onSuccess(response),
+                error -> callback.onError(error.toString())
         );
 
         requestQueue.add(request);

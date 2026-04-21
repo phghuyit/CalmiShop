@@ -38,7 +38,7 @@
         android:layout_weight="1"
         >
         <LinearLayout
-            android:id="@+id/cartItemContainer"
+            android:id="@+id/cartcontainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"></LinearLayout>
@@ -92,15 +92,17 @@
                 android:textColor="#797979"
                 />
             <TextView
+                android:id="@+id/totalprice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunitobold"
                 android:layout_marginEnd="15dp"
-                android:text="1,000,000 vnđ"
+                android:text="0 vnđ"
                 android:textSize="16sp"
                 />
         </com.google.android.flexbox.FlexboxLayout>
         <TextView
+            android:id="@+id/btn_pay"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:text="Xác Nhận Đơn Đặt Hàng"

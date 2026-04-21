@@ -49,10 +49,12 @@
                 android:text="Email"
                 />
             <EditText
+                android:id="@+id/emailId"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="Calmi@mail.com"
                 android:layout_marginBottom="10dp"
+                android:inputType="textEmailAddress"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -60,9 +62,12 @@
                 android:text="Mật Khẩu"
                 />
             <EditText
+                android:id="@+id/password"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Calmi@123"/>
+                android:layout_height="wrap_content"
+                android:hint="Calmi@123"
+                android:inputType="textPassword"
+                />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -141,4 +146,3 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>
-

@@ -49,10 +49,12 @@
                 android:text="Họ Tên"
                 />
             <EditText
+                android:id="@+id/fullName"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="Calmi Phạm"
                 android:layout_marginBottom="10dp"
+                android:inputType="textPersonName"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -60,10 +62,12 @@
                 android:text="Email"
                 />
             <EditText
+                android:id="@+id/emailId"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="Calmi@mail.com"
                 android:layout_marginBottom="10dp"
+                android:inputType="textEmailAddress"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -71,9 +75,12 @@
                 android:text="Mật Khẩu"
                 />
             <EditText
+                android:id="@+id/password"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Calmi@123"/>
+                android:layout_height="wrap_content"
+                android:hint="Calmi@123"
+                android:inputType="textPassword"
+                android:layout_marginBottom="10dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -81,9 +88,11 @@
                 android:text="Xác Nhận Mật Khẩu"
                 />
             <EditText
+                android:id="@+id/confirmpassword"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Calmi@123"/>
+                android:layout_height="wrap_content"
+                android:hint="Calmi@123"
+                android:inputType="textPassword"/>
 
             <TextView
                 android:layout_width="230dp"
@@ -124,4 +133,3 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>
-

@@ -16,6 +16,7 @@
             app:cardCornerRadius="10dp"
             >
             <ImageView
+                android:id="@+id/imgProduct"
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:src="@drawable/lamp3"
@@ -28,6 +29,7 @@
             android:orientation="vertical"
             >
             <TextView
+                android:id="@+id/nameproduct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Đèn Bàn"
@@ -36,6 +38,7 @@
                 android:textSize="10sp"
                 />
             <TextView
+                android:id="@+id/price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="200,000 vnđ"
@@ -47,21 +50,44 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"/>
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/qtybtn"
-                android:layout_marginStart="15dp"/>
+            <TextView
+                android:id="@+id/qty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tổng số lượng: 1"
+                android:fontFamily="@font/nunitosans"
+                android:layout_marginStart="15dp"
+                android:textSize="10sp"
+                />
 
         </LinearLayout>
         <View
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1"/>
-        <ImageView
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_x"
-            android:layout_gravity="top|right"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="end">
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_x"
+                android:layout_gravity="top|end"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/item_totalprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200,000 vnđ"
+                android:fontFamily="@font/nunitobold"
+                android:textSize="10sp"
+                />
+        </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

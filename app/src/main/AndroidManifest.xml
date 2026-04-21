@@ -41,18 +41,15 @@
             android:name=".SignUp"
             android:exported="false" />
         <activity
-            android:name=".SignInActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".FlashActivity1"
             android:exported="false" />
         <activity
-            android:name=".LoadingActivity"
+            android:name=".SignInActivity"
             android:exported="true"
-            android:theme="@style/Theme.CalmiHome">
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -47,9 +47,11 @@
             android:layout_height="35dp"
             android:src="@drawable/ic_email"/>
         <EditText
+            android:id="@+id/emailId"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:hint="calmishop@maill.com"/>
+            android:hint="calmishop@maill.com"
+            android:inputType="textEmailAddress"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
