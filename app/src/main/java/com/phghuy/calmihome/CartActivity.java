@@ -123,7 +123,7 @@ public class CartActivity extends AppCompatActivity {
                 if (TotalPrice == 0) {
                     Toast.makeText(view.getContext(), "Giỏ hàng đang trống!", Toast.LENGTH_SHORT).show();
                 } else {
-                    Intent intent = new Intent(CartActivity.this, PaymentMethodActivity.class);
+                    Intent intent = new Intent(CartActivity.this, PaymentActivity.class);
                     startActivity(intent);
                     finish();
                 }

@@ -4,11 +4,7 @@ plugins {
 
 android {
     namespace = "com.phghuy.calmihome"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.phghuy.calmihome"
@@ -51,4 +47,5 @@ dependencies {
     implementation("com.google.android.flexbox:flexbox:3.0.0")
     implementation("com.android.volley:volley:1.2.1")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.28")
 }

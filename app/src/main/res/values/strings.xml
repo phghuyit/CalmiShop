@@ -10,4 +10,6 @@
     <string name="tab_home">Home</string>
     <string name="tab_orders">My Orders</string>
     <string name="tab_account">Account</string>
+
+    <!-- <string name="product_prefix">Sản phẩm</string> -->
 </resources>

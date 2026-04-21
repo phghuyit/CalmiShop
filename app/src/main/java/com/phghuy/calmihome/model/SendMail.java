@@ -12,8 +12,8 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class SendMail {
-    private static final String SENDGRID_API_KEY = "dien key o day";
-    private static final String FROM_EMAIL = "dien mail o day";
+    private static final String SENDGRID_API_KEY = "";
+    private static final String FROM_EMAIL = "phghuy.it@gmail.com";
 
     public static void sendEmail(String toEmailRaw, String password) {
         new Thread(() -> {
